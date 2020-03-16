@@ -1,0 +1,690 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+
+<title>Seshat Books App</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="format-detection" content="telephone=no">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+
+<script>
+	addEventListener("load", function () {
+		setTimeout(hideURLbar, 0);
+	}, false);
+
+	function hideURLbar() {
+		window.scrollTo(0, 1);
+	}
+</script>
+<!--font-awsome-css-->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!--bootstrap-->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--custom css-->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!--component-css-->
+
+<!-- web-fonts -->
+<link href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+<!-- //web-fonts -->
+
+
+
+</head>
+<body>
+<div class="app">
+	<div class="body-back">
+		<div class="masthead pdng-stn1">
+			<div id="menu" class="panel" role="navigation">
+				<div class="wrap-content">
+					<!-- /menu -->
+					<div class="profile-menu text-center">
+						<h3>MENU</h3>
+						<div class="pro-menu">
+							<ul>
+								<li><a class="active" href="index.html">Home</a></li>
+								<li><a href="profile.html" target="_blank">Profile</a></li>
+								<li><a href="my-books.html" target="_blank">My Books</a></li>
+								<li><a href="find-books.html" target="_blank">Find Books</a></li>
+								<li><a href="reading-locations.html" target="_blank">Reading Locations</a></li>
+								<li><a href="404.html" target="_blank">Team</a></li>
+								<li><a href="contact.html" target="_blank">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- //menu -->
+				</div>
+			</div>
+			<div class="phone-box wrap push" id="home">
+				<div class="menu-notify">
+					<div class="profile-left">
+						<a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+					</div>
+					<div class="Profile-mid">
+						<img src="images/logo.png"/> <!--<h5 class="pro-link"><a href="index.html">Seshat Books</a></h5>-->
+					</div>
+					<div class="Profile-right">
+						<a href="#small-dialog" class="sign-in popup-top-anim"> <i class="fa fa-user"></i></a>
+						<!-- modal -->
+						<div id="small-dialog" class="mfp-hide">
+							<div class="login-modal">
+								<div class="booking-info">
+									<h3><a href="index.html">Seshat Books App</a></h3>
+
+								</div>
+								<div class="login-form_agile">
+									<form action="" method="post">
+										<div id="message_alert"></div>
+										<p>User Email</p>
+										<input type="text" name="signin_email" id="signin_email" required="" />
+										<p>User Password</p>
+										<input type="password" name="signin_password" id="signin_password" required="" />
+										<!-- <div class="check-text"> -->
+										<div class="check-text">
+											<ul>
+												<li>
+													<input type="checkbox" value="signin_checkbox_remember" id="brand" name="checkbox-signin">
+													<label for="brand"><span></span> Remember me ?</label>
+												</li>
+												<li> <a href="#">Forgot password?</a> </li>
+											</ul>
+											<div class="clearfix"> </div>
+										</div>
+										<input type="submit" value="Sign In" name="save_signin" id="save_signin">
+									</form>
+									<p>Don’t have an account ?<a href="#small-dialog1" class="sign-in popup-top-anim"> Sign Up</a></p>
+								</div>
+							</div>
+						</div>
+						<!-- //modal -->
+						<!-- modal-two -->
+						<div id="small-dialog1" class="mfp-hide">
+							<div class="login-modal">
+								<div class="booking-info">
+									<h3><a href="index.html">Seshat Books App</a></h3>
+
+								</div>
+								<div class="login-form_agile signup-form">
+
+									<form action="http://192.168.1.6/phonegap/signup-form.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+
+										<p>User Name</p>
+										<input type="text" name="name" id="name" required="" />
+
+
+										<input type="hidden" name="latitude" id="latitude" value="" />
+										<input type="hidden" name="longitude" id="longitude" value="" />
+										<input type="hidden" name="accuracy" id="accuracy" value="" />																														
+
+										<p>User Email</p>
+										<input type="text" name="email" id="email" required="" />
+
+										<p>User Password</p>
+										<input type="password" name="password" id="password" placeholder="" required="" />										
+
+										<p>User Location</p>
+										<input type="text" name="location" id="location" required="" />				
+
+										<p>Facebook Link</p>
+										<input type="text" name="facebook" id="facebook" required="" />
+
+										<p>Twitter Link</p>
+										<input type="text" name="twitter" id="twitter" required="" />					
+										<p>User Interests in 140 Characters</p>
+										<input type="text" name="interest" id="interest" required="" />					
+										<!-- <p>User Image</p>
+										<input type="file" name="image" id="image" required="" />							<br/>	 -->																		
+										<div class="check-text">
+											<input type="checkbox" name="checkbox-signup" id="brand1" value="brand1" required="">
+
+											<label for="brand1"><span></span>I accept the terms of use</label>
+										</div>
+										<input type="submit" value="Sign Up" name="save">
+									</form>
+								</div>
+							</div>
+						</div>
+						<!-- //modal-two -->
+
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!-- banner -->
+				<div class="banner_info_agile_w3ls">
+					<div class="banner_info_agile_w3ls_inner">
+						<img src="images/t1.jpg" alt=" " class="img-responsive">
+						<h2>Sarah</h2>
+						<span>A Little Bookworm</span>
+						<ul class="top-links_w3layouts">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<!--// banner -->
+				<!-- about -->
+				<div class="about">
+					<div class="wrap_view_agileits">
+						<h3 class="head">About Me</h3>
+						<p class="head_para">A house without books is like a body without a soul</p>
+						<div class="inner_section_wthree">
+							<div class="col-md-7 about-left">
+								<div class="about-left-info">
+									<h4>Job Title</h4>
+									<p>Researcher And Engineer</p>
+								</div>
+								<div class="about-left-info">
+									<h4>Name</h4>
+									<p>Sarah Müller</p>
+								</div>
+								<div class="about-left-info">
+									<h4>Sex</h4>
+									<p>Female</p>
+								</div>
+								<div class="about-left-info">
+									<h4>Address</h4>
+									<p> El Tahrir St.</p>
+								</div>
+								<div class="about-left-info">
+									<h4>Email Address</h4>
+									<p><a href="mailto:example@email.com">mail@example.com</a></p>
+								</div>
+							</div>
+							<div class="col-md-5 ab-right">
+								<div class="about-right-img">
+									<img src="images/g6.jpg" alt="">
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+				<!-- //about-bottom -->
+				<div class="history">
+					<div class="wrap_view_agileits">
+						<h3 class="head three">What I do</h3>
+						<p class="head_para two">My Work Details</p>
+						<div class="inner_section_wthree">
+							<div class="col-md-4 history-grid">
+								<h4>Development</h4>
+								<div class="story-img">
+									<span class="fa fa-cog" aria-hidden="true"></span>
+								</div>
+								<div class="caption_story_w3agile">
+
+									<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="col-md-4 history-grid">
+								<h4>Redesign</h4>
+								<div class="story-img">
+									<span class="fa fa-laptop" aria-hidden="true"></span>
+								</div>
+								<div class="caption_story_w3agile">
+
+									<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="col-md-4 history-grid">
+								<h4>24/7 SUPPORT</h4>
+								<div class="story-img">
+									<span class="fa fa-thumbs-o-up" aria-hidden="true"></span>
+								</div>
+								<div class="caption_story_w3agile">
+
+									<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<!--/education-->
+				<div class="education_sec">
+					<div class="col-md-6 edu">
+					</div>
+					<div class="col-md-6 education-main">
+						<h3 class="head">My Education</h3>
+						<div class="education-grids">
+							<div class="education">
+								<div class="education-year">
+									<h4>2014-2015</h4>
+									<h6>Master Degree</h6>
+								</div>
+								<div class="education-info">
+									<h4>Computer University</h4>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa..</p>
+
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="education two">
+								<div class="education-year">
+									<h4>2010-2012</h4>
+									<h6>Master Degree</h6>
+								</div>
+								<div class="education-info">
+									<h4>Computer University</h4>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa..</p>
+
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="education">
+								<div class="education-year">
+									<h4>2008-2010</h4>
+									<h6>Master Degree</h6>
+								</div>
+								<div class="education-info">
+									<h4>Computer University</h4>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa..</p>
+
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="clearfix"> </div>
+				</div>
+
+				<!--//education-->
+				<!--/experience-->
+				<div class="education_sec">
+					<div class="col-md-6 education-main">
+						<h3 class="head">My Experience</h3>
+						<div class="education-grids">
+							<div class="education">
+								<div class="education-year">
+									<h4>2011-2014</h4>
+									<h6>Lorem ipsum</h6>
+								</div>
+								<div class="education-info">
+									<h4>Web Developer</h4>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa..</p>
+
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="education two">
+								<div class="education-year">
+									<h4>2012-2014</h4>
+									<h6>Lorem ipsum</h6>
+								</div>
+								<div class="education-info">
+									<h4>Mobile App Developer</h4>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa..</p>
+
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="education">
+								<div class="education-year">
+									<h4>2012-2014</h4>
+									<h6>Lorem ipsum</h6>
+								</div>
+								<div class="education-info">
+									<h4>Graphic Designer</h4>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa..</p>
+
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 exp">
+					</div>
+
+					<div class="clearfix"> </div>
+				</div>
+				<!--//experience-->
+				<!--/progress_skills-->
+				<div class="progress_skills">
+					<h3 class="head three">My Skills</h3>
+					<p class="head_para two">My Work Details</p>
+					<div class="inner_section_wthree">
+						<div class="col-md-3 col-sm-6">
+							<div class="progress blue">
+							<span class="progress-left">
+				<span class="progress-bar"></span>
+							</span>
+								<span class="progress-right">
+				<span class="progress-bar"></span>
+							</span>
+								<div class="progress-value">90%</div>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="progress yellow">
+							<span class="progress-left">
+				<span class="progress-bar"></span>
+							</span>
+								<span class="progress-right">
+				<span class="progress-bar"></span>
+							</span>
+								<div class="progress-value">75%</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="progress green">
+							<span class="progress-left">
+				<span class="progress-bar"></span>
+							</span>
+								<span class="progress-right">
+				<span class="progress-bar"></span>
+							</span>
+								<div class="progress-value">55%</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="progress pink">
+							<span class="progress-left">
+				<span class="progress-bar"></span>
+							</span>
+								<span class="progress-right">
+				<span class="progress-bar"></span>
+							</span>
+								<div class="progress-value">45%</div>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<!--//progress_skills-->
+				<!--/tesimonials-->
+				<div class="tesimonials">
+					<div class="wrap_view_agileits">
+						<h3 class="head">My Clients</h3>
+						<p class="head_para">In Clients Words</p>
+						<div class="inner_section_wthree">
+
+							<div class="test_grid_sec">
+								<div class="col-md-offset-2 col-md-8">
+									<div class="carousel slide two" data-ride="carousel" id="quote-carousel">
+										<!-- Bottom Carousel Indicators -->
+										<ol class="carousel-indicators two">
+											<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+											<li data-target="#quote-carousel" data-slide-to="1"></li>
+											<li data-target="#quote-carousel" data-slide-to="2"></li>
+										</ol>
+
+										<!-- Carousel Slides / Quotes -->
+										<div class="carousel-inner">
+
+											<!-- Quote 1 -->
+											<div class="item active">
+												<blockquote>
+													<div class="test_grid">
+														<div class="col-sm-3 text-center test_img">
+															<img src="images/t1.jpg" alt=" " class="img-responsive" />
+
+														</div>
+														<div class="col-sm-9 test_img_info">
+															<p>Maecenas quis neque libero. Class aptent taciti.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+																auctor nec lacus ut tempor. Mauris.</p>
+															<h6>Sara Lisbon</h6>
+														</div>
+													</div>
+												</blockquote>
+											</div>
+											<!-- Quote 2 -->
+											<div class="item">
+												<blockquote>
+													<div class="test_grid">
+														<div class="col-sm-3 text-center test_img">
+															<img src="images/t2.jpg" alt=" " class="img-responsive" />
+														</div>
+														<div class="col-sm-9 test_img_info">
+															<p>Lorem ipsum dolor sit amet. Class aptent taciti.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+																auctor nec lacus ut tempor. Mauris.</p>
+															<h6>Jane Wearne</h6>
+														</div>
+													</div>
+												</blockquote>
+											</div>
+											<!-- Quote 3 -->
+											<div class="item">
+												<blockquote>
+													<div class="test_grid">
+														<div class="col-sm-3 text-center test_img">
+															<img src="images/t3.jpg" alt=" " class="img-responsive" />
+														</div>
+														<div class="col-sm-9 test_img_info">
+															<p>Maecenas quis neque libero. Class aptent taciti.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+																auctor nec lacus ut tempor. Mauris.</p>
+															<h6>Alice Williams</h6>
+														</div>
+													</div>
+												</blockquote>
+											</div>
+										</div>
+
+										<!-- Carousel Buttons Next/Prev -->
+										<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+										<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!--//tesimonials-->
+				<!--//footer-->
+				<div class="footer">
+					<div class="wrap_view_agileits">
+						<div class="footer_grids_w3ls">
+							<div class="col-md-3 footer_grid_left_w3_agileits">
+								<div class="footer_grid_left_w3_agileitsl">
+									<a href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+								</div>
+								<div class="footer_grid_left_w3_agileitsr">
+									<h4>Twitter</h4>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="col-md-3 footer_grid_left_w3_agileits">
+								<div class="footer_grid_left_w3_agileitsl">
+									<a href="#"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+								</div>
+								<div class="footer_grid_left_w3_agileitsr">
+									<h4>Facebook</h4>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="col-md-3 footer_grid_left_w3_agileits">
+								<div class="footer_grid_left_w3_agileitsl">
+									<a href="#"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+								</div>
+								<div class="footer_grid_left_w3_agileitsr">
+									<h4>Google+</h4>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="col-md-3 footer_grid_left_w3_agileits">
+								<div class="footer_grid_left_w3_agileitsl">
+									<a href="#"><span class="fa fa-youtube" aria-hidden="true"></span></a>
+								</div>
+								<div class="footer_grid_left_w3_agileitsr">
+									<h4>Youtube</h4>
+
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+					<div class="pro-menu footer_nav">
+						<ul>
+							<li><a class="active" href="index.html">Home</a></li>
+							<li><a href="profile.html" target="_blank">Profile</a></li>
+							<li><a href="my-books.html" target="_blank">My Books</a></li>
+							<li><a href="find-books.html" target="_blank">Find Books</a></li>
+							<li><a href="reading-locations.html" target="_blank">Reading Locations</a></li>
+							<li><a href="contact.html" target="_blank">Contact</a></li>
+						</ul>
+					</div>
+					<div class="footer_pos_w3_agile">
+						<h5>© 2018 Seshat Books. All Rights Reserved | Design by <a href="https://w3layouts.com/">W3layouts</a></h5>
+					</div>
+				</div>
+				<!--//footer-->
+
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/getlocation.js"></script>
+
+<!--script-->
+<script src="js/modernizr.custom.js"></script>
+<script src="js/bigSlide.js"></script>
+<script>
+		$(document).ready(function () {
+			$('.menu-link').bigSlide();
+		});
+	</script>
+<!-- pop-up-box -->
+<script src="js/jquery.magnific-popup.js"></script>
+<script>
+		$(document).ready(function () {
+			$('.popup-top-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+		});
+	</script>
+<!--//pop-up-box -->
+
+<script>
+	
+function validateForm(){
+
+
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  var location = document.getElementById("location").value;
+  var latitude = document.getElementById("latitude").value;
+  var longitude = document.getElementById("longitude").value;
+  var accuracy = document.getElementById("accuracy").value;
+
+  var interest = document.getElementById("interest").value;
+  var image = document.getElementById("image").value;
+  var facebook = document.getElementById("facebook").value;
+  var twitter = document.getElementById("twitter").value;
+
+
+ name.trim();
+ email.trim();
+ password.trim();
+ location.trim();
+ facebook.trim();
+ twitter.trim();
+ interest.trim();
+
+	if(location==null || location==""){
+		alert("please enable your GPS");
+
+	}
+
+		if(longitude==null || longitude==""){
+		alert("please enable your GPS");
+
+	}
+
+	if(accuracy==null || accuracy==""){
+		alert("please enable your GPS");
+
+	}
+
+	var atposition = email.indexOf("@");
+	var dotposition= email.lastIndexOf(".");
+
+	if (atposition<1 || dotposition<atposition+2 || dotposition+2>=email.length){  
+		  window.alert("Please enter a valid e-mail address"); 
+		  document.getElementById("email").focus(); 
+		  return false;  
+  }
+
+   var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+    '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+
+   if(!pattern.test(facebook)){
+   		window.alert("Please enter a valid facebook link");
+   		document.getElementById("facebook").focus(); 
+   		return false;
+
+   }
+
+      if(!pattern.test(twitter)){
+   		window.alert("Please enter a valid twitter link");
+   	    document.getElementById("twitter").focus(); 
+   		return false;
+
+   }
+
+}
+
+</script>
+
+
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+
+
+<script src="cordova.js"></script>
+<!-- <script src="js/getlocation.js"></script> -->
+<script src="js/index.js"></script>
+</body>
+</html>
