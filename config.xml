@@ -32,7 +32,7 @@
 
          <allow-intent href="market:*" />
 
-         <preference name="android-targetSdkVersion" value="27" />
+         <preference name="android-targetSdkVersion" value="28" />
 
 
 <!--         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
