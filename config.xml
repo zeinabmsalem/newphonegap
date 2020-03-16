@@ -29,7 +29,10 @@
 
 
     <platform name="android">
-        <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
+
+         <allow-intent href="market:*" />
+
+<!--         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
         <icon density="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
         <icon density="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
@@ -46,7 +49,7 @@
         <splash density="port-hdpi" src="www/res/screen/android/drawable-port-hdpi-screen.png" />
         <splash density="port-xhdpi" src="www/res/screen/android/drawable-port-xhdpi-screen.png" />
         <splash density="port-xxhdpi" src="www/res/screen/android/drawable-port-xxhdpi-screen.png" />
-        <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
+        <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" /> -->
 
                 <!-- added by me -->
 <!--         <uses-permission android:name="android.permission.INTERNET" />
